@@ -1,0 +1,28 @@
+\documentclass{article}
+
+\usepackage{amsmath, amssymb}
+\usepackage{titlesec}
+\usepackage[a4paper, total={7in, 8in}]{geometry}
+\usepackage{graphicx}
+\graphicspath{ {./imgs/} }
+
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\titlespacing*{\section}{0pt}{8.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+\title{Engineering Maths Notes}
+\author{George Howell}
+\date{\today}
+
+\begin{document}
+    \maketitle
+    \newpage
+
+    \tableofcontents
+    \newpage
+
+    \input{src/ch10_sequences.tex}
+    \pagebreak
+    \input{src/ch11_series_1.tex}
+
+\end{document}

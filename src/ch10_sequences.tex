@@ -1,0 +1,177 @@
+\section{Sequences}
+    
+    \subsection{Sequences}
+        Any function, \(f\), whose input is restricted to positive or negative integer values, \(n\), has an output in
+        the form of a sequence of numbers, i.e. \(f(n)\). Accordingly, such a function is called a \textbf{sequence}.
+
+    \subsection{Graphs of Sequences}
+        Since the range of a sequence consists of a sequence of discrete numbers, the terms of the sequence, the graph 
+        of a sequence will take the form of a collection of isolated points in the Cartesian plane.
+
+    \subsection{Arithmetic Sequences}
+        Any sequence defined in the form,
+        \begin{equation}
+            f(n) = a + nd
+        \end{equation}
+        where \(n\) is a positive integer, \(a\) is the first term and \(d\) is the common difference, is known as a
+        \textbf{arithmetic sequence}, which is also an equation of a straight line. 
+        \par \hfill \break
+        As an example, a sequence such as \(1, 3, 5, 7, ...\) has a common difference of \(2\) and the first term is
+        \(1\) so the sequence may be seen as \(f(n) = 1 + 2n\)
+
+    \subsection{Geometric Sequences}
+        Any sequence defined in the form,
+        \begin{equation}
+            f(n) = Ar^n
+        \end{equation}
+        where \(n\) is a positive integer, \(A\) is the first term and \(r\) is the common ratio, is known as a
+        \textbf{geometric sequence}. If the absolute value of the common ratio is \(|r|<1\) the sequence converges for
+        increasing values of \(n\), else is \(|r|>1\) the sequence diverges.
+        \par \hfill \break
+        As an example, a sequence such as \(16, 8, 4, 2, ...\) has a common ratio of \(1/2\) and the first term is
+        \(16\) so the sequence may be seen as \(f(n) = 16(1/2)^n\).
+
+    \subsection{Harmonic Sequences}
+        The definition of a harmonic sequence is that its reciprocal must be an arithmetic sequence, and takes the 
+        form,
+        \begin{equation}
+            f(n) = 1 / g(n)
+        \end{equation}
+
+    \subsection{Recursive Prescriptions}
+        A prescription where each term of a sequence is seen to depend upon another term of the same sequence is called
+        a recursive prescription and can make the computing of the sequence more efficient. For example, a sequence of 
+        \(3, 3, 12, 30\) could be seen as,
+        \begin{equation}
+            f(n+2) = 2(f(n+1) + f(n)) \quad \textrm{where} \quad f(1) = 3
+        \end{equation}
+        which shows that each term of the sequence is the result of the previous two terms of the sequence summed 
+        together, then doubled.
+        \par \hfill \break
+        Given the general form of the current and next value of \textbf{arithmetic} sequence is,
+        \begin{equation}
+            f(n) = a + nd \quad \textrm{and} \quad f(n+1) = a + (n+1)d = a + nd + d
+        \end{equation}
+        then the recursive form would be seen as,
+        \begin{equation}
+            f(n+1) = f(n) + d
+        \end{equation}
+        \par \hfill \break
+        Similarly, the current and next term of a \textbf{geometric} sequence is seen as,
+        \begin{equation}
+            f(n) = Ar^n \quad \textrm{and} \quad f(n+1) = Ar^{n+1} = Ar^n.r
+        \end{equation}
+        Hence, in recursive form,
+        \begin{equation}
+            f(n+1) = r.f(n)
+        \end{equation}
+
+    \subsection{Difference Equations}
+        The prescription of a sequence such as \(f(n) = 5n - 2\) can be written as the recursive sequence 
+        \(f(n+1) = f(n) + 5\). If this is then expressed so that all the unknowns are on the left-hand side, as 
+        \(f(n+1)-f(n)=5\), it is of the form of a 1st order \textbf{difference equation}.
+        \par \hfill \break
+        Any equation of the form,
+        \begin{equation}
+            a_{n+m} f(n+m)+a_{n+m-1} f(n+m-1)+a_{n+m-2} f(n+m-2)+ ... + a_n f(n) = 0
+        \end{equation}
+        where the \(a\) coefficients are constants, is an \(m^{th}\) order, homogeneous, constant-coefficient, linear 
+        difference equation, also referred to as a \textbf{linear recurrence relation}. The order of a difference 
+        equation is the maximum number of terms between any pair. In order to generate the terms of a difference 
+        equation, as many terms as the order must be given, i.e. a 3\textsuperscript{rd} order difference equation must
+        have 3 terms given.
+
+    \subsection{Solving First Order Difference Equations}
+        As has been previously seen, a prescription for an arithmetic or geometric sequence can be expressed as a 
+        difference equation. What we wish to achieve in this section is essentially reversing the process, so finding 
+        the solution of the difference equation.
+        \par \hfill \break
+        Any first order difference equation,
+        \begin{equation}
+            af(n+1) + bf(n) = 0
+        \end{equation}
+        where the right-hand side is equal to zero is known as a \textbf{homogeneous}. We then assume a general solution 
+        of the form \(f(n) = Kw^n\), and insert that into the difference equation, solving to find \(K\) and \(w\).
+        \par \hfill \break
+        As an example, consider the difference equation \(f(n+1) + 9f(n) = 0\) for \(n \geq 0\) where \(f(0)=6\). Assuming 
+        that \(f(n) = Kw^n\), this would then been seen as,
+        \begin{equation}
+            Kw^{n+1} + 9Kw^n = 0
+        \end{equation}
+        Factorising out \(Kw^n\), leads to the \textbf{characteristic equation},
+        \begin{equation}
+            Kw^n (w+9)=0
+        \end{equation}
+        This means that \(w+9=0\), hence \(w=-9\). The general solution would be \(f(n) = Kw^n = K(-9)^n\), and then 
+        given the initial term of \(f(0) = 6\), leads to \(f(0) = K(-9)^0 = K\), so then \(K=6\). Hence the solution 
+        to the difference equation is then,
+        \begin{equation}
+            f(n) = 6(-9)^n
+        \end{equation}
+
+    \subsection{Solving Second Order Difference Equations}
+        Solving second order homogeneous difference equations of the form,
+        \begin{equation}
+            af(n+2) + bf(n+1) + cf(n) = 0
+            \label{eq:seq_2nd_order_general_eq}
+        \end{equation}
+        follows the same method as solving first order equations, by assuming the general solution of the equation as 
+        \(f(n) = Kw^n\). However, in this case substituting out \(Kw^n\) to form the characteristic equation will lead
+        to \(w\) being of a quadratic form, i.e. \(w^2+w+c\), and hence there will then be two outcomes. This leads to 
+        the solution of a second order difference equation being of the following form,
+        \begin{equation}
+            f(n) = K_1 w_1^n + K_2 w_2^n
+        \end{equation}
+        Since the characteristic equation is a quadratic there will be two values of w yielding the solution,
+        \begin{equation}
+            f(n) =
+            \begin{cases}
+                Aw_1^n + Bw_2^n \quad \textrm{if} \quad w_1 \neq w_2 \\
+                (A + Bn) w^n \quad \textrm{if} \quad w_1=w_2=w
+            \end{cases}
+        \end{equation}
+        The values of \(A\) and \(B\) are found by applying the two \(w\) terms once found.
+        \par \hfill \break
+        As an example, considor the second order resursive prescription,
+        \begin{equation}
+            f(n+1) - 25f(n-1) = 0
+        \end{equation}
+        with initial conditions \(f(0) = 1\) and \(f(1) = 5\). Given the general solution of \(f(n) = Kw^n\), this can
+        then be expressed as,
+        \begin{equation}
+            Kw^{n+1} - 25Kw^{n-1} = 0 \quad \textrm{and multipling by \(w\) gives} \quad Kw^n w^2 - 25Kw^n = 0
+        \end{equation}
+        Factoring out \(Kw^n\) leads to the characteristic equation,
+        \begin{equation}
+            Kw^n(w^2-25) = 0
+        \end{equation}
+        hence, \(w = \pm 5\). Inserting these values into the general solution of Eq.(\ref{eq:seq_2nd_order_general_eq})
+        and using the initial conditions results in \(K_1 = 1\) and \(K_2 = 0\). Hence, the general term can be seen as,
+        \begin{equation}
+            f(n) = 5^n
+        \end{equation}
+
+    \subsection{Limits}
+        The limit of a sequence is the number that the output approaches as the input increase to infinity. A sequence 
+        with a finite limit is said to be \textbf{convergent} and converge to that limit. A sequence without a finite 
+        limit is said to \textbf{diverge}.
+
+    \subsection{Rules of Limits}
+        Limits can be manipulated algebraically according to the following rules, firstly assuming:
+        \begin{equation}
+            \lim_{n\to\infty} f(n) = F \quad \textrm{and} \lim_{n\to\infty} g(n) = G
+        \end{equation}
+        the \textbf{multiplication} rule is,
+        \begin{equation}
+            \lim_{n\to\infty} kf(n) = k \lim_{n\to\infty} f(n) = F
+        \end{equation}
+        then \textbf{sum and differences} rule is,
+        \begin{equation}
+            \lim_{n\to\infty}{[f(n) \pm g(n)]} = \lim_{n\to\infty} f(n) \pm \lim_{n\to\infty} g(n) = F \pm G
+        \end{equation}
+        the \textbf{products and quotients} is,
+        \begin{equation}
+            \lim_{n\to\infty}{[f(n).g(n)]} = \lim_{n\to\infty} f(n) . \lim_{n\to\infty} g(n) = F.G
+        \end{equation}
+        If the limits of both the numerator and the denominator in a quotient are infinite the limit is called 
+        \textbf{indeterminate} and cannot be found without some manipulation of the quotient.

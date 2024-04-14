@@ -1,0 +1,45 @@
+\section{Series 1}
+
+    If the terms in a sequence, \(f(1)\), \(f(2)\), \(f(3)\), etc are added together to form a sum,
+    \begin{equation}
+        \sum_{r=1}^n f(r) = f(1) + f(2) + ... + f(n)
+    \end{equation}
+    Then what is formed is called a \textbf{series}, a sum of terms of a sequence.
+
+    \subsection{Arithmetic Series}
+        
+        A general arithmetic series is seen as,
+        \begin{equation}
+            f(n) = a + nd
+        \end{equation}
+        where \(a\) is the first term and \(d\) is the common difference.
+
+        \par \hfill \break
+        The general arithmetic series containing the first \(n\) terms of the arithmetic sequence can be written as,
+        \begin{equation}
+            \sum_{r=0}^{n-1} (a + rd) = a + (a +d) + (a + 2d) + ...
+        \end{equation}
+        this can also be written as,
+        \begin{equation}
+            \sum_{r=0}^{n-1} (a + rd) = (a + [n-1]d) + (a + [n-2]d) + ...
+        \end{equation}
+        adding these together gives,
+        \begin{equation}
+            2 \sum_{r=0}^{n-1} (a + rd) = n(2a + [n-1d])
+        \end{equation}
+        
+        \par \hfill \break
+        Hence, the generalised arithmetic series can then be seen as,
+        \begin{equation}
+            \sum_{r=0}^{n-1} (a + rd) = \frac{n}{2}(2a + [n-1d])
+        \end{equation}
+
+        \par \hfill \break
+        For example, consider the sequence 10, 6, 2, -2, -6, etc, with which the series would then be \(10+6+2-2-6\), 
+        etc. This is an arithmetic sequence where the initial term \(a=10\), and the common difference \(d=-4\).  
+        Therefore, to find the sum of the first 20 terms, \(n=20\), can be seen as,
+        \begin{equation}
+            \sum_{r=0}^{n-1} (a + rd) = \sum_{r=0}^{20-1} (10 + r(-4)) = \frac{20}{2}(2(10+[20-1](-4))) = -560 
+        \end{equation}
+
+    \subsection{Arithmetic Mean}
